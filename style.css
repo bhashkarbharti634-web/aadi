@@ -33,6 +33,14 @@ body{
             0 0 20px rgba(255,255,255,0.2);
 }
 
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
 .navbar-brand {
     color: rgb(212, 174, 69) !important;
     font-weight: bold;
@@ -126,13 +134,13 @@ img {
 }
 
 .progress-report {
-    padding-left: 30px;
+    padding-left: 10px;
     
 }
 
 .student-photo {
-    width: 100px;
-    height:100px;
+    width: 350px !important;
+    height: 350px  !important;
     /* max-width: none; */
     border-radius: 50%;
     object-fit: cover;
@@ -218,6 +226,176 @@ img {
 .progress-item h5 {
     margin-top: 10px;
     margin-bottom: 0;
+}
+
+
+
+.students-page {
+    min-height: 100vh;
+    padding: 70px 8%;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.heading h1 {
+    font-size: 42px;
+    margin: 0 0 10px;
+    color: #123c24;
+}
+
+.heading p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.student-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.student-card {
+    background: rgba(255, 255, 255, 0.75);
+    padding: 25px 20px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+.student-card:hover {
+    transform: translateY(-8px);
+}
+
+.student-card a {
+    display: block;
+}
+
+.student-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ffffff;
+    cursor: pointer;
+}
+
+.student-card h2 {
+    margin: 18px 0 8px;
+    font-size: 22px;
+}
+
+.student-card p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.girl {
+    position: relative;
+    height: 300px !important;
+    width:300px !important;
+    border-radius: 50%;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.manage-pic{
+    height: 400px !important;
+    width: 600px !important;
+}
+
+.profile {
+    display: none;
+    min-height: 100vh;
+    padding: 80px 8%;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile:target {
+    display: flex;
+}
+
+.profile-box {
+    width: 850px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 45px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.profile-box img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid #ffffff;
+    flex-shrink: 0;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h1 {
+    font-size: 38px;
+    margin: 0 0 20px;
+    color: #123c24;
+}
+
+.profile-info p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #176b3a;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #0d4c28;
+}
+
+@media (max-width: 1000px) {
+    .student-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .student-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .profile-box img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .profile-info h1 {
+        font-size: 30px;
+    }
 }
 
 @media (max-width: 768px) {
